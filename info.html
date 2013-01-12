@@ -8,6 +8,37 @@
   	<link rel="stylesheet" href="./jqm/jquery.mobile-1.2.0.min.css" />
   	<script src="./jqm/jquery-1.8.3.min.js"></script>
   	<script src="./jqm/jquery.mobile-1.2.0.min.js"></script>
+    <script type="text/javascript">$( document ).on( "pageinit", function() {
+    $( "#popupMap iframe" )
+        .attr( "width", 0 )
+        .attr( "height", 0 );
+      
+    $( "#popupMap iframe" ).contents().find( "#map_canvas" )
+        .css( { "width" : 0, "height" : 0 } );
+         
+    $( "#popupMap" ).on({
+        popupbeforeposition: function() {
+            var size = scale( 480, 320, 0, 1 ),
+                w = size.width,
+                h = size.height;
+
+            $( "#popupMap iframe" )
+                .attr( "width", w )
+                .attr( "height", h );
+           
+            $( "#popupMap iframe" ).contents().find( "#map_canvas" )
+                .css( { "width": w, "height" : h } );
+        },
+        popupafterclose: function() {
+            $( "#popupMap iframe" )
+                .attr( "width", 0 )
+                .attr( "height", 0 );
+           
+            $( "#popupMap iframe" ).contents().find( "#map_canvas" )
+                .css( { "width": 0, "height" : 0 } );
+        }
+    });
+});</script>
   </head> 
   <body> 
     <div data-role="page" id="Info" data-title="Info">

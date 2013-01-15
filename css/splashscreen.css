@@ -4,11 +4,11 @@
 
 #splashScreen{
 	position:absolute;
-	top:0;
-	left:0;
+	top:0pxw;
+	left:0px;
 	height:100%;
 	width:100%;
-	background-color:#252525;
+	background-color:#000033;
 	background-repeat:no-repeat;
 	text-align:center;
 }

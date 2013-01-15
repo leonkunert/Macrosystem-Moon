@@ -4,9 +4,8 @@
 
 #splashScreen{
 	position:absolute;
-	top:0pxw;
+	top:0px;
 	left:0px;
-	height:100%;
 	width:100%;
 	background-color:#000033;
 	background-repeat:no-repeat;

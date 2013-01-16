@@ -10,7 +10,9 @@
     color: white;
     position: absolute;
     background :url('../img/bg.png') no-repeat;
-    min-height: 100%;
+    min-height: 95%;
+	min-width: 100%;
     background-position: 50% 50%;
     background-color: #000033;
+	background-attachment: scroll;
 }
